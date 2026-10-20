@@ -13,12 +13,27 @@ import {
 
 export const PERSONAL_INFO = {
   name: "Charan Sri Hari P",
-  title: "AI & Data Science Engineer",
+  title: "Forward Deployed Engineer | AI Agents & Prompt Engineering",
   email: "charansrihari1607@gmail.com",
   phone: "+91 9742072679",
   location: "Bangalore, India",
-  summary: "Final-year BE in AI & Data Science student with hands-on experience in machine learning, NLP, data analysis, DSA, and Android development. Skilled in building and fine-tuning models and dedicated to applying scalable, impactful AI solutions."
+  summary: "AI & Data Science engineer with hands-on Forward Deployed Engineering experience shipping production AI agents directly into customer workflows. Specializes in prompt engineering, conversational AI agent design and RAG for real-world deployment, with an applied ML/NLP background."
 };
+
+export const WORK_EXPERIENCE = [
+  {
+    role: "Forward Deployed Engineer",
+    company: "ExtraaEdge Technology Solutions Pvt. Ltd.",
+    period: "Apr 2026 - Present",
+    location: "Bangalore, India",
+    points: [
+      "Designed and deployed AI voice-calling agents (VidyaCall) for higher-education clients, from prompt design through live-call testing.",
+      "Built multi-language conversational flows, including Hindi and Kannada, for lead-qualification calls.",
+      "Tested deployed agents against per-institution QA rubrics and revised prompts based on findings.",
+      "Built a multi-tenant RAG chatbot for institution admissions enquiries, grounding LLM answers in each institution's own knowledge base and pushing chat conversations into the CRM."
+    ]
+  }
+];
 
 export const PROJECTS: Project[] = [
   {
@@ -54,6 +69,10 @@ export const EDUCATION: Education[] = [
 ];
 
 export const SKILLS: SkillCategory[] = [
+  {
+    category: "AI Agents & LLMs",
+    skills: ["Prompt Engineering", "Conversational Agent Design", "RAG", "Voice Agents", "Agent QA & Evaluation"]
+  },
   {
     category: "Programming",
     skills: ["Java", "Python", "C"]

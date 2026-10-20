@@ -35,8 +35,8 @@ const Hero: React.FC = () => {
               Contact Me <ArrowRight size={18} />
             </a>
             <a 
-              href="#" 
-              onClick={(e) => e.preventDefault()}
+              href="/Charan_Sri_Hari_P_Resume.pdf"
+              download
               className="px-6 py-3 border border-slate-600 hover:border-accent text-slate-300 hover:text-accent rounded-lg font-medium transition-all flex items-center justify-center gap-2"
             >
               Download Resume <Download size={18} />
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
               />
                <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500">
                   <span className="text-6xl font-thin mb-4">CS</span>
-                  <span className="uppercase tracking-widest text-xs">AI Engineer</span>
+                  <span className="uppercase tracking-widest text-xs">FDE &amp; AI Agents</span>
                </div>
             </div>
           </div>

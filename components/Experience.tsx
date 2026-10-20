@@ -1,12 +1,36 @@
 import React from 'react';
 import Section from './Section';
-import { EDUCATION, AWARDS } from '../constants';
+import { EDUCATION, AWARDS, WORK_EXPERIENCE } from '../constants';
 import { motion } from 'framer-motion';
-import { GraduationCap, Trophy } from 'lucide-react';
+import { GraduationCap, Trophy, Briefcase } from 'lucide-react';
 
 const Experience: React.FC = () => {
   return (
-    <Section id="experience" title="Education & Achievements">
+    <Section id="experience" title="Experience, Education & Achievements">
+      <div className="mb-16">
+        <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+          <Briefcase className="text-accent" /> Work Experience
+        </h3>
+        <div className="space-y-8 relative border-l border-slate-700 ml-3 pl-8 pb-4">
+          {WORK_EXPERIENCE.map((job, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <span className="absolute -left-[41px] top-0 w-5 h-5 bg-secondary border-2 border-accent rounded-full"></span>
+              <h4 className="text-xl font-semibold text-white">{job.role}</h4>
+              <p className="text-accent mb-1">{job.company}</p>
+              <p className="text-slate-500 text-sm mb-3">{job.period} · {job.location}</p>
+              <ul className="list-disc ml-5 space-y-2 text-slate-300">
+                {job.points.map((p, i) => <li key={i}>{p}</li>)}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </div>
       <div className="grid lg:grid-cols-2 gap-12">
         
         {/* Education Column */}
